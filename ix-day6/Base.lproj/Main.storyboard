@@ -34,26 +34,23 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3sk-nd-rtA">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1gF-O6-h6W">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3sk-nd-rtA" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="4sI-Sw-73T"/>
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="3sk-nd-rtA" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="LrC-iU-5Re"/>
+                            <constraint firstItem="1gF-O6-h6W" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="NZy-Em-6bp"/>
+                            <constraint firstItem="1gF-O6-h6W" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="Xik-eo-K86"/>
+                            <constraint firstItem="1gF-O6-h6W" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="aWd-wt-9kc"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
-                            <constraint firstItem="3sk-nd-rtA" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="ldS-xB-wFN"/>
-                            <constraint firstItem="3sk-nd-rtA" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="oub-oQ-Vg5"/>
+                            <constraint firstItem="1gF-O6-h6W" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="fsh-dG-yDu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qyN-YI-Akf"/>
-                    <connections>
-                        <outlet property="map" destination="3sk-nd-rtA" id="6bW-w2-B6i"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
