@@ -9,13 +9,24 @@
 import UIKit
 import MapKit
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, CLLocationManagerDelegate {
 
 
+    @IBOutlet weak var map: MKMapView!
+    var localManager: CLLocationManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        localManager = CLLocationManager()
+        localManager.delegate = self
+        localManager.desiredAccuracy = kCLLocationAccuracyBest
+        localManager.requestAlwaysAuthorization()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if CLLocationManager.locationServicesEnabled() {
+            localManager.startUpdatingLocation()
+        }
     }
 
     override func didReceiveMemoryWarning() {
