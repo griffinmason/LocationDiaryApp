@@ -14,6 +14,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var map: MKMapView!
     var localManager: CLLocationManager!
+    var currentUserLocation: CLLocation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,6 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         localManager.delegate = self
         localManager.desiredAccuracy = kCLLocationAccuracyBest
         localManager.requestAlwaysAuthorization()
-        // Do any additional setup after loading the view, typically from a nib.
         
         if CLLocationManager.locationServicesEnabled() {
             localManager.startUpdatingLocation()
@@ -31,9 +31,28 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        // Get the users location from the array of locations
+        let userLocation: CLLocation = locations[0] as CLLocation
+        
+        // You can call stopUpdatingLocation() to stop listening for location updates
+        // manager.stopUpdatingLocation()
+        
+        print("user latitude = \(userLocation.coordinate.latitude)")
+        print("user longitude = \(userLocation.coordinate.longitude)")
+        
+        // Store reference to the users location in the class instance (self)
+        currentUserLocation = userLocation
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
+    {
+        // An error occurred trying to retrieve users location
+        print("Error \(error)")
+    }
 
 }
 
