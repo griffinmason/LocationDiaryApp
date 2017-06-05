@@ -173,7 +173,7 @@
         <scene sceneID="12Y-zS-W0i">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b0u-Rl-hfa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="" image="earth-globe" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YZo-O8-YWt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -192,7 +192,7 @@
         <scene sceneID="g3X-cy-659">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wCM-sH-uWz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="" image="list-button-with-3-elements" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="m8y-37-sH7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -207,7 +207,7 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings-->
         <scene sceneID="ANA-hI-cgq">
             <objects>
                 <viewController id="pw7-eb-goF" sceneMemberID="viewController">
@@ -220,7 +220,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="OKR-Gi-t6A"/>
+                    <navigationItem key="navigationItem" title="Settings" id="OKR-Gi-t6A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Qp-V3-SPb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -230,7 +230,7 @@
         <scene sceneID="RUU-ag-i93">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Z8-py-Te7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="I5Y-XJ-cXX"/>
+                    <tabBarItem key="tabBarItem" title="" image="settings" id="I5Y-XJ-cXX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fwh-fp-exX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -265,7 +265,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="earth-globe" width="32" height="32"/>
+        <image name="list-button-with-3-elements" width="32" height="32"/>
+        <image name="settings" width="32" height="32"/>
     </resources>
 </document>
