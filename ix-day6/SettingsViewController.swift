@@ -11,8 +11,18 @@ import MapKit
 
 class SettingsViewController: UITableViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if UserDefaults.standard.string(forKey: "userName") == nil {
+            UserDefaults.standard.set("Name" ,forKey: "userName")
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -20,6 +30,10 @@ class SettingsViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        nameLabel.text = UserDefaults.standard.string(forKey: "userName")
     }
     
     
@@ -32,23 +46,15 @@ class SettingsViewController: UITableViewController {
             cell.accessoryType = .checkmark
         }
         
-        if indexPath.section == 2 && indexPath.row == 0 && mapType == "hybrid" {
+        if indexPath.section == 2 && indexPath.row == 0 && mapType == "regular" {
             cell.accessoryType = .checkmark
         }
         
-        if indexPath.section == 2 && indexPath.row == 1 && mapType == "hybridFlyover" {
+        if indexPath.section == 2 && indexPath.row == 1 && mapType == "transit" {
             cell.accessoryType = .checkmark
         }
         
         if indexPath.section == 2 && indexPath.row == 2 && mapType == "satelite" {
-            cell.accessoryType = .checkmark
-        }
-        
-        if indexPath.section == 2 && indexPath.row == 3 && mapType == "sateliteFlyover" {
-            cell.accessoryType = .checkmark
-        }
-        
-        if indexPath.section == 2 && indexPath.row == 4 && mapType == "standard" {
             cell.accessoryType = .checkmark
         }
         

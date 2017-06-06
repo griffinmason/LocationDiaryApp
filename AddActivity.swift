@@ -8,19 +8,32 @@
 
 import UIKit
 
-class AddActivity: UIViewController {
+class AddActivity: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    var delegate: AddActivityDelegate?
+    var newActivity: Activity?
+    
+    
 
-    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var descriptionField: UITextView!
     
-    @IBAction func cancelButton(_ sender: UIBarButtonItem) {
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        delegate?.didCancelActivity()
+        dismiss(animated: true, completion: nil)
         performSegue(withIdentifier: "unwindToVC1", sender: self)
     }
     
-    @IBAction func saveButton(_ sender: UIBarButtonItem) {
+    @IBAction func save(_ sender: UIBarButtonItem) {
+        newActivity?.name = nameField.text!
+        newActivity?.description = descriptionField.text
+        delegate?.didSaveActivity(activity: newActivity!)
+        dismiss(animated: true, completion: nil)
         performSegue(withIdentifier: "unwindToVC1", sender: self)
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +45,6 @@ class AddActivity: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

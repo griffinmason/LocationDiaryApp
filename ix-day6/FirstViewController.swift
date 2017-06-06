@@ -16,8 +16,13 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     var localManager: CLLocationManager!
     var currentUserLocation: CLLocation!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if UserDefaults.standard.string(forKey: "mapType") == nil {
+            UserDefaults.standard.set("regular", forKey: "mapType")
+        }
         
         localManager = CLLocationManager()
         localManager.delegate = self
