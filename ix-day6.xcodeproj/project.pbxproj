@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		053417791EE6BD48004D73B6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053417781EE6BD48004D73B6 /* SettingsViewController.swift */; };
 		0582BF9B1EE5425500854664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582BF9A1EE5425500854664 /* AppDelegate.swift */; };
 		0582BF9D1EE5425500854664 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582BF9C1EE5425500854664 /* FirstViewController.swift */; };
 		0582BF9F1EE5425500854664 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582BF9E1EE5425500854664 /* SecondViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		053417781EE6BD48004D73B6 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0582BF971EE5425500854664 /* ix-day6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ix-day6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0582BF9A1EE5425500854664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0582BF9C1EE5425500854664 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				0582BFA31EE5425500854664 /* Assets.xcassets */,
 				0582BFA51EE5425500854664 /* LaunchScreen.storyboard */,
 				0582BFA81EE5425500854664 /* Info.plist */,
+				053417781EE6BD48004D73B6 /* SettingsViewController.swift */,
 			);
 			path = "ix-day6";
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				0582BF9F1EE5425500854664 /* SecondViewController.swift in Sources */,
 				0582BF9B1EE5425500854664 /* AppDelegate.swift in Sources */,
 				0582BFB51EE5865300854664 /* AddActivity.swift in Sources */,
+				053417791EE6BD48004D73B6 /* SettingsViewController.swift in Sources */,
 				0582BF9D1EE5425500854664 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +313,7 @@
 				0582BFAD1EE5425500854664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
