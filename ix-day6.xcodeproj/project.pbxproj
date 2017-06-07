@@ -12,6 +12,7 @@
 		0534177D1EE6FD94004D73B6 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534177C1EE6FD94004D73B6 /* Activity.swift */; };
 		0534177F1EE6FE98004D73B6 /* AddActivityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534177E1EE6FE98004D73B6 /* AddActivityDelegate.swift */; };
 		053417811EE704B5004D73B6 /* GeoPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053417801EE704B5004D73B6 /* GeoPoint.swift */; };
+		057CF6E81EE7E22600C27C44 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057CF6E71EE7E22600C27C44 /* ActivityDetailViewController.swift */; };
 		0582BF9B1EE5425500854664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582BF9A1EE5425500854664 /* AppDelegate.swift */; };
 		0582BF9D1EE5425500854664 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582BF9C1EE5425500854664 /* FirstViewController.swift */; };
 		0582BF9F1EE5425500854664 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582BF9E1EE5425500854664 /* SecondViewController.swift */; };
@@ -27,6 +28,7 @@
 		0534177C1EE6FD94004D73B6 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		0534177E1EE6FE98004D73B6 /* AddActivityDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivityDelegate.swift; sourceTree = "<group>"; };
 		053417801EE704B5004D73B6 /* GeoPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoPoint.swift; sourceTree = "<group>"; };
+		057CF6E71EE7E22600C27C44 /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
 		0582BF971EE5425500854664 /* ix-day6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ix-day6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0582BF9A1EE5425500854664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0582BF9C1EE5425500854664 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				0582BF9A1EE5425500854664 /* AppDelegate.swift */,
 				0582BF9C1EE5425500854664 /* FirstViewController.swift */,
 				0582BF9E1EE5425500854664 /* SecondViewController.swift */,
+				057CF6E71EE7E22600C27C44 /* ActivityDetailViewController.swift */,
 				0582BFA01EE5425500854664 /* Main.storyboard */,
 				0582BFA31EE5425500854664 /* Assets.xcassets */,
 				0582BFA51EE5425500854664 /* LaunchScreen.storyboard */,
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				057CF6E81EE7E22600C27C44 /* ActivityDetailViewController.swift in Sources */,
 				0582BF9F1EE5425500854664 /* SecondViewController.swift in Sources */,
 				0582BF9B1EE5425500854664 /* AppDelegate.swift in Sources */,
 				0534177D1EE6FD94004D73B6 /* Activity.swift in Sources */,

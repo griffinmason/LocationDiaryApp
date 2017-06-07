@@ -21,6 +21,7 @@ class AddActivity: UIViewController, UIImagePickerControllerDelegate, UINavigati
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var descriptionField: UITextView!
     
+    /*
     @IBAction func cancel(_ sender: UIBarButtonItem) {
         delegate?.didCancelActivity()
         dismiss(animated: true, completion: nil)
@@ -34,7 +35,7 @@ class AddActivity: UIViewController, UIImagePickerControllerDelegate, UINavigati
         dismiss(animated: true, completion: nil)
         performSegue(withIdentifier: "unwindToVC1", sender: self)
     }
-    
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
 
