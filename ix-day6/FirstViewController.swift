@@ -9,12 +9,14 @@
 import UIKit
 import MapKit
 
-class FirstViewController: UIViewController, CLLocationManagerDelegate {
+class FirstViewController: UIViewController, CLLocationManagerDelegate, AddActivityDelegate {
 
 
     @IBOutlet weak var map: MKMapView!
     var localManager: CLLocationManager!
     var currentUserLocation: CLLocation!
+    var location: CLLocationCoordinate2D?
+    var pin: PinAnnotation?
     
     
     override func viewDidLoad() {
@@ -37,6 +39,14 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    func didSaveActivity(activity: Activity) {
+        let location = CLLocationCoordinate2D(latitude: currentUserLocation.coordinate.latitude, longitude: currentUserLocation.coordinate.longitude)
+        let pin = PinAnnotation(title: activity.name, subtitle: activity.description, coordinate: location)
+        map.setRegion(MKCoordinateRegionMakeWithDistance(location, 50000, 50000), animated: true)
+        map.addAnnotation(pin)
+    }
+    
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
@@ -57,6 +67,15 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     {
         // An error occurred trying to retrieve users location
         print("Error \(error)")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToAddActivity" {
+            let navigationViewController = segue.destination as! UINavigationController
+            let addActivityVC = navigationViewController.topViewController as! AddActivity
+            
+            addActivityVC.delegate = self
+        }
     }
 
 }

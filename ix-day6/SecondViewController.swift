@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UITableViewController {
+class SecondViewController: UITableViewController, AddActivityDelegate {
     
     var activities: [Activity] = []
     var currentlySelectedIndexPath: IndexPath?
@@ -30,7 +30,6 @@ class SecondViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     /*
     @IBAction func unwindToVC1(segue:UIStoryboardSegue) {
         
@@ -44,8 +43,19 @@ class SecondViewController: UITableViewController {
             let indexPath = tableView.indexPath(for: cell)
             
             activityVC.activity = activities[(indexPath?.row)!]
-            
         }
+        if segue.identifier == "navToAddActivity" {
+            let navigationViewController = segue.destination as! UINavigationController
+            let addActivityViewController = navigationViewController.topViewController as! AddActivity
+            
+            addActivityViewController.delegate = self
+        }
+    }
+    
+    func didSaveActivity(activity: Activity) {
+        print("Activity was saved: \(activity)")
+        activities.append(activity)
+        self.tableView.reloadData()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

@@ -20,6 +20,7 @@
 		0582BFA41EE5425500854664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0582BFA31EE5425500854664 /* Assets.xcassets */; };
 		0582BFA71EE5425500854664 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0582BFA51EE5425500854664 /* LaunchScreen.storyboard */; };
 		0582BFB51EE5865300854664 /* AddActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582BFB41EE5865300854664 /* AddActivity.swift */; };
+		05A9F10D1EE928EE00D6320D /* pinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A9F10C1EE928EE00D6320D /* pinAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		0582BFA61EE5425500854664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0582BFA81EE5425500854664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0582BFB41EE5865300854664 /* AddActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddActivity.swift; path = ../AddActivity.swift; sourceTree = "<group>"; };
+		05A9F10C1EE928EE00D6320D /* pinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pinAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				0534177C1EE6FD94004D73B6 /* Activity.swift */,
 				0534177E1EE6FE98004D73B6 /* AddActivityDelegate.swift */,
 				053417801EE704B5004D73B6 /* GeoPoint.swift */,
+				05A9F10C1EE928EE00D6320D /* pinAnnotation.swift */,
 			);
 			path = "ix-day6";
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				0534177D1EE6FD94004D73B6 /* Activity.swift in Sources */,
 				0582BFB51EE5865300854664 /* AddActivity.swift in Sources */,
 				053417791EE6BD48004D73B6 /* SettingsViewController.swift in Sources */,
+				05A9F10D1EE928EE00D6320D /* pinAnnotation.swift in Sources */,
 				0534177F1EE6FE98004D73B6 /* AddActivityDelegate.swift in Sources */,
 				053417811EE704B5004D73B6 /* GeoPoint.swift in Sources */,
 				0534177B1EE6F6F3004D73B6 /* EditSettingsViewController.swift in Sources */,

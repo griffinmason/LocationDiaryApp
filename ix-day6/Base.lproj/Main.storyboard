@@ -51,7 +51,13 @@
                             <constraint firstItem="1gF-O6-h6W" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="fsh-dG-yDu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Apple Map" id="qyN-YI-Akf"/>
+                    <navigationItem key="navigationItem" title="Apple Map" id="qyN-YI-Akf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="BUN-gQ-g9y">
+                            <connections>
+                                <segue destination="DYp-Ww-UfV" kind="show" identifier="segueToAddActivity" id="0gg-lO-VDR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="map" destination="1gF-O6-h6W" id="Dc2-KR-oJH"/>
                     </connections>
@@ -160,11 +166,91 @@
                             <outlet property="delegate" destination="nJM-kU-6hz" id="jDc-4T-gEq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Activity Log" id="Krh-dz-GSM"/>
+                    <navigationItem key="navigationItem" title="Activity Log" id="Krh-dz-GSM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="65i-zo-dw1">
+                            <connections>
+                                <segue destination="DYp-Ww-UfV" kind="show" identifier="navToAddActivity" id="Jmb-EL-ALY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bu0-xf-mge" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1686" y="361"/>
+        </scene>
+        <!--Add Activity-->
+        <scene sceneID="9f7-75-sz0">
+            <objects>
+                <viewController id="nUt-Mh-o45" customClass="AddActivity" customModule="ix_day6" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PJ2-oI-3jZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="oOD-FC-wzs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l3L-DV-lC9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cG-pB-aih">
+                                <rect key="frame" x="16" y="85" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PGf-Uc-kB1">
+                                <rect key="frame" x="16" y="114" width="343" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaJ-k4-xG1">
+                                <rect key="frame" x="16" y="152" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yfd-bP-Exo">
+                                <rect key="frame" x="16" y="181" width="343" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PGf-Uc-kB1" firstAttribute="trailing" secondItem="l3L-DV-lC9" secondAttribute="trailingMargin" id="5vv-tC-0bC"/>
+                            <constraint firstItem="CaJ-k4-xG1" firstAttribute="leading" secondItem="PGf-Uc-kB1" secondAttribute="leading" id="67j-pZ-JB2"/>
+                            <constraint firstItem="PGf-Uc-kB1" firstAttribute="top" secondItem="8cG-pB-aih" secondAttribute="bottom" constant="8" symbolic="YES" id="EYV-4W-P63"/>
+                            <constraint firstItem="8cG-pB-aih" firstAttribute="leading" secondItem="l3L-DV-lC9" secondAttribute="leadingMargin" id="FK2-6M-TCZ"/>
+                            <constraint firstItem="8cG-pB-aih" firstAttribute="leading" secondItem="Yfd-bP-Exo" secondAttribute="leading" id="Lxb-Uj-vJc"/>
+                            <constraint firstItem="CaJ-k4-xG1" firstAttribute="top" secondItem="PGf-Uc-kB1" secondAttribute="bottom" constant="8" symbolic="YES" id="Pbu-oP-uxS"/>
+                            <constraint firstItem="8cG-pB-aih" firstAttribute="top" secondItem="PJ2-oI-3jZ" secondAttribute="bottom" constant="21" id="V03-j3-xgR"/>
+                            <constraint firstItem="PGf-Uc-kB1" firstAttribute="trailing" secondItem="Yfd-bP-Exo" secondAttribute="trailing" id="Xsa-ZA-Vcl"/>
+                            <constraint firstItem="oOD-FC-wzs" firstAttribute="top" secondItem="Yfd-bP-Exo" secondAttribute="bottom" constant="309" id="i2d-fa-CvZ"/>
+                            <constraint firstItem="Yfd-bP-Exo" firstAttribute="top" secondItem="CaJ-k4-xG1" secondAttribute="bottom" constant="8" symbolic="YES" id="mqq-n9-k9t"/>
+                            <constraint firstItem="PGf-Uc-kB1" firstAttribute="leading" secondItem="8cG-pB-aih" secondAttribute="leading" id="ypr-nD-e23"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Activity" id="uq7-i6-7re">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="jV1-EK-VDi">
+                            <connections>
+                                <action selector="cancel:" destination="nUt-Mh-o45" id="YfK-eR-1He"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="vwg-Rf-oY3">
+                            <connections>
+                                <action selector="save:" destination="nUt-Mh-o45" id="MzT-2o-1Bx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="Yfd-bP-Exo" id="8cF-4N-Kng"/>
+                        <outlet property="nameTextField" destination="PGf-Uc-kB1" id="yW5-Y1-p5x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R7Z-6P-rO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3693.5999999999999" y="-309.89505247376314"/>
         </scene>
         <!--Details-->
         <scene sceneID="5Wk-Qq-zHw">
@@ -465,6 +551,24 @@
             </objects>
             <point key="canvasLocation" x="736.79999999999995" y="1073.6131934032985"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uxo-Wt-B0p">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DYp-Ww-UfV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2hK-6s-iyz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nUt-Mh-o45" kind="relationship" relationship="rootViewController" id="kFK-yj-3Ji"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CC8-FM-EDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2754.4000000000001" y="-309.89505247376314"/>
+        </scene>
     </scenes>
     <resources>
         <image name="18485747_10213241790788449_3274871048585515490_n" width="960" height="960"/>
@@ -472,4 +576,7 @@
         <image name="list-button-with-3-elements" width="32" height="32"/>
         <image name="settings" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="0gg-lO-VDR"/>
+    </inferredMetricsTieBreakers>
 </document>

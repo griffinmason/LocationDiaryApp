@@ -9,6 +9,7 @@
 import Foundation
 
 protocol AddActivityDelegate {
+    //func activityWillBeSaved()
     func didSaveActivity(activity: Activity)
-    func didCancelActivity()
+    //func didCancelActivity()
 }
