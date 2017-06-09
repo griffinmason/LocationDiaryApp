@@ -21,6 +21,7 @@
 		0582BFA71EE5425500854664 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0582BFA51EE5425500854664 /* LaunchScreen.storyboard */; };
 		0582BFB51EE5865300854664 /* AddActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582BFB41EE5865300854664 /* AddActivity.swift */; };
 		05A9F10D1EE928EE00D6320D /* pinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A9F10C1EE928EE00D6320D /* pinAnnotation.swift */; };
+		794BB7BBFF3ED2A7961F2D6B /* Pods_ix_day6.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95B791D2FAEF475DE0BC813A /* Pods_ix_day6.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,9 @@
 		0582BFA81EE5425500854664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0582BFB41EE5865300854664 /* AddActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddActivity.swift; path = ../AddActivity.swift; sourceTree = "<group>"; };
 		05A9F10C1EE928EE00D6320D /* pinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pinAnnotation.swift; sourceTree = "<group>"; };
+		134932ED2E024CFD7AE1021B /* Pods-ix-day6.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ix-day6.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ix-day6/Pods-ix-day6.debug.xcconfig"; sourceTree = "<group>"; };
+		95B791D2FAEF475DE0BC813A /* Pods_ix_day6.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ix_day6.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD73781CF7039D37638E9154 /* Pods-ix-day6.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ix-day6.release.xcconfig"; path = "Pods/Target Support Files/Pods-ix-day6/Pods-ix-day6.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				794BB7BBFF3ED2A7961F2D6B /* Pods_ix_day6.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +63,8 @@
 			children = (
 				0582BF991EE5425500854664 /* ix-day6 */,
 				0582BF981EE5425500854664 /* Products */,
+				13EB7CA2DC48AE3E97C386F0 /* Pods */,
+				E238DD91E29F7F9A38FD864F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +98,23 @@
 			path = "ix-day6";
 			sourceTree = "<group>";
 		};
+		13EB7CA2DC48AE3E97C386F0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				134932ED2E024CFD7AE1021B /* Pods-ix-day6.debug.xcconfig */,
+				FD73781CF7039D37638E9154 /* Pods-ix-day6.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E238DD91E29F7F9A38FD864F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95B791D2FAEF475DE0BC813A /* Pods_ix_day6.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0582BFAB1EE5425500854664 /* Build configuration list for PBXNativeTarget "ix-day6" */;
 			buildPhases = (
+				964C044EEAAF16E3D586D25D /* [CP] Check Pods Manifest.lock */,
 				0582BF931EE5425500854664 /* Sources */,
 				0582BF941EE5425500854664 /* Frameworks */,
 				0582BF951EE5425500854664 /* Resources */,
+				703C4F5D86A5FC5E90B37F2B /* [CP] Embed Pods Frameworks */,
+				969D35B6CD34608B9DC6AC7C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -157,6 +184,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		703C4F5D86A5FC5E90B37F2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ix-day6/Pods-ix-day6-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		964C044EEAAF16E3D586D25D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		969D35B6CD34608B9DC6AC7C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ix-day6/Pods-ix-day6-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0582BF931EE5425500854664 /* Sources */ = {
@@ -296,6 +371,7 @@
 		};
 		0582BFAC1EE5425500854664 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 134932ED2E024CFD7AE1021B /* Pods-ix-day6.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ix-day6/Info.plist";
@@ -308,6 +384,7 @@
 		};
 		0582BFAD1EE5425500854664 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD73781CF7039D37638E9154 /* Pods-ix-day6.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ix-day6/Info.plist";

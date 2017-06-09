@@ -7,17 +7,27 @@
 //
 
 import UIKit
+import Alamofire
+import MapKit
 
 
 class AddActivity: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var delegate: AddActivityDelegate?
     var newActivity: Activity?
+    var userLocation: CLLocation?
+    var localManager: CLLocationManager!
+    var currentUserLocation: CLLocation!
+    var location: CLLocationCoordinate2D?
+
     
     var activityTableViewController: SecondViewController?
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextView!
+    
+    
+    
     
     @IBAction func cancel(_ sender: Any?) {
         print("Name: \(String(describing: nameTextField.text))")
@@ -35,18 +45,44 @@ class AddActivity: UIViewController, UIImagePickerControllerDelegate, UINavigati
 
         }
         else {
-            let newActivity = Activity()
+            newActivity = Activity()
             newActivity?.name = nameTextField.text!
             newActivity?.description = descriptionTextField.text!
             //activityTableViewController?.didSaveActivity(activity: newActivity!)
             delegate?.didSaveActivity(activity: newActivity!)
             self.dismiss(animated: true, completion: nil)
         }
+        Alamofire.request("https://activitydiary-84452.firebaseio.com/activities.json", method: .post, parameters: newActivity?.toJSON(), encoding: JSONEncoding.default).responseJSON { response in
+            
+            switch response.result {
+            case .success( _):
+                self.delegate?.didSaveActivity(activity: self.newActivity!)
+                self.dismiss(animated: true, completion: nil)
+            case .failure: break
+                // Failure... handle error
+            }
+            
+        }
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        // Get the users location from the array of locations
+        let userLocation: CLLocation = locations[0] as CLLocation
+        
+        // You can call stopUpdatingLocation() to stop listening for location updates
+        // manager.stopUpdatingLocation()
+        // Store reference to the users location in the class instance (self)
+        currentUserLocation = userLocation
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if CLLocationManager.locationServicesEnabled() {
+            localManager.startUpdatingLocation()
+        }
 
         // Do any additional setup after loading the view.
     }
