@@ -40,7 +40,9 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, AddActiv
         }
         
         map.showsUserLocation = true
-        Alamofire.request("https://activitydiary-84452.firebaseio.com/").responseJSON { response in
+        
+        //request to Alamofire database  for pins (doesn't full work yet)
+        Alamofire.request("https://activitydiary-84452.firebaseio.com/activities.json").responseJSON { response in
             //print(response.request)  // original URL request
             //print(response.response) // HTTP URL response
             //print(response.data)     // server data
@@ -55,19 +57,21 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, AddActiv
                     let activity = Activity()
                     
                     if let actDictionary = value as? [String : AnyObject] {
+                        print ("actDictionary created")
                         activity?.name = actDictionary["name"] as! String
                         activity?.description = actDictionary["description"] as! String
                         
                         if let geoPointDictionary = actDictionary["location"] as? [String: AnyObject] {
+                            print ("Started pin making")
                             let location = GeoPoint()
                             location.lat = (geoPointDictionary["lat"] as? Double)!
+                            print (location.lat)
                             location.lng = (geoPointDictionary["lng"] as? Double)!
+                            print (location.lng)
                             activity?.location = location
-                            
-                            let annotation = MKPointAnnotation()
-                            annotation.coordinate = CLLocationCoordinate2DMake((activity?.location.lat)!, (activity?.location.lng)!);
-                            annotation.title = activity?.name
-                            self.map.addAnnotation(annotation)
+                            let pinLocation = CLLocationCoordinate2D(latitude: location.lat, longitude: location.lng)
+                            let pin = PinAnnotation(title: (activity?.name)!, subtitle: (activity?.description)!, coordinate: pinLocation)
+                            self.map.addAnnotation(pin)
                         }
                     }
                     
@@ -87,6 +91,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, AddActiv
         let pin = PinAnnotation(title: activity.name, subtitle: activity.description, coordinate: location)
         map.setRegion(MKCoordinateRegionMakeWithDistance(location, 100000, 100000), animated: true)
         map.addAnnotation(pin)
+        activity.location = GeoPoint(latitude: currentUserLocation.coordinate.latitude, longitude: currentUserLocation.coordinate.longitude)
     }
     
 

@@ -14,6 +14,11 @@ class ActivityDetailViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var longLabel: UILabel!
+    @IBOutlet weak var latLabel: UILabel!
+    
+    var lat: String?
+    var long: String?
     
     
     override func viewDidLoad() {
@@ -29,6 +34,11 @@ class ActivityDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         nameLabel.text = activity?.name
         descriptionLabel.text = activity?.description
+        lat = ("Latitude: \(String(describing: activity?.location.lat))")
+        latLabel.text = lat
+        long = ("Longitude: \(String(describing: activity?.location.lng))")
+        longLabel.text = long
+        
     }
     
 

@@ -150,6 +150,7 @@
 				TargetAttributes = {
 					0582BF961EE5425500854664 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = EBPVAUPGC3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -374,6 +375,7 @@
 			baseConfigurationReference = 134932ED2E024CFD7AE1021B /* Pods-ix-day6.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EBPVAUPGC3;
 				INFOPLIST_FILE = "ix-day6/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MasonCreativeSolutions.ix-day6";
@@ -387,6 +389,7 @@
 			baseConfigurationReference = FD73781CF7039D37638E9154 /* Pods-ix-day6.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EBPVAUPGC3;
 				INFOPLIST_FILE = "ix-day6/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MasonCreativeSolutions.ix-day6";

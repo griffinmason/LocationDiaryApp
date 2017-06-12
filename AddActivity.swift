@@ -15,10 +15,10 @@ class AddActivity: UIViewController, UIImagePickerControllerDelegate, UINavigati
     
     var delegate: AddActivityDelegate?
     var newActivity: Activity?
-    var userLocation: CLLocation?
-    var localManager: CLLocationManager!
-    var currentUserLocation: CLLocation!
-    var location: CLLocationCoordinate2D?
+    //var userLocation: CLLocation?
+    //var localManager: CLLocationManager?
+    //var currentUserLocation: CLLocation!
+    //var location: CLLocationCoordinate2D?
 
     
     var activityTableViewController: SecondViewController?
@@ -65,7 +65,7 @@ class AddActivity: UIViewController, UIImagePickerControllerDelegate, UINavigati
         }
         
     }
-    
+    /*
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         // Get the users location from the array of locations
@@ -76,14 +76,10 @@ class AddActivity: UIViewController, UIImagePickerControllerDelegate, UINavigati
         // Store reference to the users location in the class instance (self)
         currentUserLocation = userLocation
     }
-    
+    */
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if CLLocationManager.locationServicesEnabled() {
-            localManager.startUpdatingLocation()
-        }
-
         // Do any additional setup after loading the view.
     }
 
